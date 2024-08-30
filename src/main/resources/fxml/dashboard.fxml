@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+
+<?import javafx.scene.image.Image?>
+<BorderPane style="-fx-background-color: #f4f4f4;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.javafx.controller.DashboardController">
+
+  <!-- Left Side with Buttons -->
+  <left>
+    <VBox prefHeight="441.0" prefWidth="168.0" spacing="15" style="-fx-padding: 20 0 20 0; -fx-background-color: #2e3b4e;" stylesheets="/fxml/style.css">
+      <children>
+        <!-- First Button with Icon -->
+        <Button maxWidth="Infinity" onAction="#showScreen1" styleClass="jfx-button">
+          <graphic>
+            <HBox spacing="10" alignment="CENTER_LEFT">
+              <children>
+                <ImageView fitHeight="20" fitWidth="20" pickOnBounds="true" preserveRatio="true">
+                  <image>
+                    <Image url="@/icons/patient.png" />
+                  </image>
+                </ImageView>
+                <Label text="Ασθενείς" style="-fx-text-fill: white;" />
+              </children>
+            </HBox>
+          </graphic>
+        </Button>
+
+        <!-- Second Button with Icon -->
+        <Button maxWidth="Infinity" onAction="#showScreen2" styleClass="jfx-button">
+          <graphic>
+            <HBox spacing="10" alignment="CENTER_LEFT">
+              <children>
+                <ImageView fitHeight="20" fitWidth="20" pickOnBounds="true" preserveRatio="true">
+                  <image>
+                    <Image url="@/icons/calendar.png" />
+                  </image>
+                </ImageView>
+                <Label text="Ραντεβού" style="-fx-text-fill: white;" />
+              </children>
+            </HBox>
+          </graphic>
+        </Button>
+
+        <!-- Third Button with Icon -->
+        <Button maxWidth="Infinity" onAction="#showScreen3" styleClass="jfx-button">
+          <graphic>
+            <HBox spacing="10" alignment="CENTER_LEFT">
+              <children>
+                <ImageView fitHeight="20" fitWidth="20" pickOnBounds="true" preserveRatio="true">
+                  <image>
+                    <Image url="@/icons/settings.png" />
+                  </image>
+                </ImageView>
+                <Label text="Διαχείρηση" style="-fx-text-fill: white;" />
+              </children>
+            </HBox>
+          </graphic>
+        </Button>
+      </children>
+    </VBox>
+  </left>
+
+  <!-- Center Area -->
+  <center>
+    <StackPane fx:id="centerPane" prefHeight="441.0" prefWidth="517.0" style="-fx-padding: 20;  -fx-border-color: #e0e0e0; -fx-border-width: 2;">
+      <!-- This area will be dynamically populated with different content -->
+    </StackPane>
+  </center>
+</BorderPane>

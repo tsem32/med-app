@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.VBox?>
+
+<?import javafx.util.Callback?>
+<VBox xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.javafx.controller.PatientsController" spacing="10" style="-fx-padding: 10;" stylesheets="@/fxml/style.css">
+  <TableView fx:id="personTableView">
+    <columns>
+      <TableColumn fx:id="firstNameColumn" text="Όνομα" />
+      <TableColumn fx:id="lastNameColumn" text="Επίθετο" />
+      <TableColumn fx:id="fathersNameColumn" text="Πατρώνυμο" />
+      <TableColumn fx:id="healthIdColumn" text="A.M.K.A" />
+    </columns>
+  </TableView>
+</VBox>

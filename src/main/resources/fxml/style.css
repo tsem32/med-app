@@ -1,0 +1,40 @@
+/* styles.css */
+.jfx-button {
+    -fx-background-color: #2e3b4e; /* Initial button color */
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-padding: 10px 20px;
+    -fx-border-radius: 5px;
+    -fx-background-radius: 5px;
+}
+
+/* Hover effect */
+.jfx-button:hover {
+    -fx-background-color: #99ccff; /* Change color when hovered */
+    -fx-text-fill: #fff;
+}
+.button-add-calendar {
+    visibility: hidden;
+}
+
+.label {
+    font-weight: bold;
+    text-fill: #333;
+}
+
+.value {
+    font-size: 14px;
+    text-fill: #666;
+}
+
+.table-view .column-header {
+    -fx-background-color: #2e3b4e; /* Header background color */
+    -fx-text-fill: white; /* Header text color */
+}
+.table-view .column-header .label {
+    -fx-text-fill: white; /* Header text color */
+}
+
+.calendar-view {
+    -fx-font-family: 'Arial'; /* Or another font that supports Greek */
+}
