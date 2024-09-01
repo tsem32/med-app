@@ -1,16 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.effect.*?>
-<?import java.lang.*?>
 <?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
-<?import javafx.scene.layout.BorderPane?>
-<?import javafx.scene.layout.StackPane?>
-<?import javafx.scene.layout.VBox?>
-<?import javafx.scene.image.ImageView?>
-<?import javafx.scene.layout.HBox?>
-
-<?import javafx.scene.image.Image?>
 <BorderPane style="-fx-background-color: #f4f4f4;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.javafx.controller.DashboardController">
 
   <!-- Left Side with Buttons -->
@@ -18,7 +10,7 @@
     <VBox prefHeight="441.0" prefWidth="168.0" spacing="15" style="-fx-padding: 20 0 20 0; -fx-background-color: #2e3b4e;" stylesheets="/fxml/style.css">
       <children>
         <!-- First Button with Icon -->
-        <Button maxWidth="Infinity" onAction="#showScreen1" styleClass="jfx-button">
+        <Button fx:id="patientsBtn" maxWidth="Infinity" onAction="#showPatientsScreen" styleClass="jfx-button">
           <graphic>
             <HBox spacing="10" alignment="CENTER_LEFT">
               <children>
@@ -34,7 +26,7 @@
         </Button>
 
         <!-- Second Button with Icon -->
-        <Button maxWidth="Infinity" onAction="#showScreen2" styleClass="jfx-button">
+        <Button fx:id="appointmentsBtn" maxWidth="Infinity" onAction="#showAppointmentsScreen" styleClass="jfx-button">
           <graphic>
             <HBox spacing="10" alignment="CENTER_LEFT">
               <children>
@@ -50,7 +42,7 @@
         </Button>
 
         <!-- Third Button with Icon -->
-        <Button maxWidth="Infinity" onAction="#showScreen3" styleClass="jfx-button">
+        <Button fx:id="settingsBtn" maxWidth="Infinity" onAction="#showSettingsScreen" styleClass="jfx-button">
           <graphic>
             <HBox spacing="10" alignment="CENTER_LEFT">
               <children>

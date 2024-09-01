@@ -1,6 +1,5 @@
 package com.example.javafx;
 
-import com.example.javafx.controller.DashboardController;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -19,7 +18,7 @@ public class JavaFxApp extends Application {
         System.setProperty("file.encoding", "UTF-8");
 
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/fxml/dashboard.fxml"));
-        Parent root = fxmlLoader.load   ();
+        Parent root = fxmlLoader.load();
 
         primaryStage.setTitle("Dash Board");
         primaryStage.setScene(new Scene(root, 1200, 800));  // Adjust size as needed

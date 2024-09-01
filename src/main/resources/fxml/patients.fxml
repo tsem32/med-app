@@ -1,17 +1,43 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.TableColumn?>
-<?import javafx.scene.control.TableView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
+<VBox xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.javafx.controller.PatientsController"
+      prefWidth="800" prefHeight="600"
+      style="-fx-background-color: #2e3b4e; -fx-border-color: #3c4b5e; -fx-border-width: 1px; -fx-border-radius: 10; -fx-background-radius: 10;"
+      spacing="15" alignment="CENTER" stylesheets="/fxml/style.css">
 
-<?import javafx.util.Callback?>
-<VBox xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.javafx.controller.PatientsController" spacing="10" style="-fx-padding: 10;" stylesheets="@/fxml/style.css">
-  <TableView fx:id="personTableView">
+  <!-- Padding around the VBox -->
+  <padding>
+    <Insets top="20" right="20" bottom="20" left="20"/>
+  </padding>
+
+  <!-- HBox for Search Field and Button -->
+  <HBox spacing="10" alignment="CENTER_LEFT">
+    <TextField fx:id="searchField" promptText="Αναζήτηση ασθενή..."
+               style="-fx-background-color: #3b4a5d; -fx-text-fill: white; -fx-border-color: #ffffff; -fx-border-width: 1px; -fx-background-radius: 5; -fx-border-radius: 5;"/>
+    <Button text="Αναζήτηση" fx:id="searchButton"
+            style="-fx-background-color: #3b4a5d; -fx-text-fill: white; -fx-border-color: #ffffff; -fx-border-width: 1px; -fx-background-radius: 5; -fx-border-radius: 5;"
+            onAction="#filterPatients"/>
+  </HBox>
+
+  <!-- TableView for displaying patients -->
+  <TableView fx:id="personTableView" prefHeight="500.0" prefWidth="750.0"
+             style="-fx-background-color: #3b4a5d; -fx-text-fill: white; -fx-font-size: 14px; -fx-border-color: #ffffff; -fx-border-width: 1px;">
+
+    <!-- Columns for person details -->
     <columns>
-      <TableColumn fx:id="firstNameColumn" text="Όνομα" />
-      <TableColumn fx:id="lastNameColumn" text="Επίθετο" />
-      <TableColumn fx:id="fathersNameColumn" text="Πατρώνυμο" />
-      <TableColumn fx:id="healthIdColumn" text="A.M.K.A" />
+      <TableColumn fx:id="firstNameColumn" text="Όνομα" prefWidth="150.0"/>
+      <TableColumn fx:id="lastNameColumn" text="Επίθετο" prefWidth="150.0"/>
+      <TableColumn fx:id="fathersNameColumn" text="Πατρώνυμο" prefWidth="150.0"/>
+      <TableColumn fx:id="healthIdColumn" text="A.M.K.A" prefWidth="150.0"/>
     </columns>
+
+    <!-- Padding inside the TableView -->
+    <padding>
+      <Insets top="10" right="10" bottom="10" left="10"/>
+    </padding>
   </TableView>
 </VBox>
